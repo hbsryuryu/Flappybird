@@ -14,27 +14,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // SKViewに型を変換する
-        let skView = self.view as! SKView
-        
-        // FPSを表示する
-        skView.showsFPS = true
-        
-        // ノードの数を表示する
-        skView.showsNodeCount = true
+        let skView = self.view as! SKView// SKViewに型を変換する
+        skView.showsFPS = true// FPSを表示する
+        skView.showsNodeCount = true // ノードの数を表示する
         
         // ビューと同じサイズでシーンを作成する
         let scene = GameScene(size:skView.frame.size) // ←GameSceneクラスに変更する
-        
-        // ビューにシーンを表示する
-        skView.presentScene(scene)
+        skView.presentScene(scene)// ビューにシーンを表示する
     }
     
-    // ステータスバーを消す --- ここから ---
+    // ステータスバーを消す
     override var prefersStatusBarHidden: Bool {
         get {
             return true
         }
-    } // --- ここまで追加 ---
+    }
     
 }

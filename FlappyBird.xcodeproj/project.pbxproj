@@ -13,6 +13,8 @@
 		B2251429232636C4000FD134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2251428232636C4000FD134 /* Assets.xcassets */; };
 		B225142C232636C4000FD134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B225142A232636C4000FD134 /* LaunchScreen.storyboard */; };
 		B225143423264FA7000FD134 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225143323264FA7000FD134 /* GameScene.swift */; };
+		B27212FC235A48BB00C4E8C5 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27212FB235A48BB00C4E8C5 /* background.mp3 */; };
+		B27212FE235A5BB900C4E8C5 /* chun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B27212FD235A5BB900C4E8C5 /* chun.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B225142B232636C4000FD134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B225142D232636C4000FD134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B225143323264FA7000FD134 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B27212FB235A48BB00C4E8C5 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		B27212FD235A5BB900C4E8C5 /* chun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chun.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				B2251428232636C4000FD134 /* Assets.xcassets */,
 				B225142A232636C4000FD134 /* LaunchScreen.storyboard */,
 				B225142D232636C4000FD134 /* Info.plist */,
+				B27212FB235A48BB00C4E8C5 /* background.mp3 */,
+				B27212FD235A5BB900C4E8C5 /* chun.mp3 */,
 			);
 			path = FlappyBird;
 			sourceTree = "<group>";
@@ -125,6 +131,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27212FC235A48BB00C4E8C5 /* background.mp3 in Resources */,
+				B27212FE235A5BB900C4E8C5 /* chun.mp3 in Resources */,
 				B225142C232636C4000FD134 /* LaunchScreen.storyboard in Resources */,
 				B2251429232636C4000FD134 /* Assets.xcassets in Resources */,
 				B2251427232636C3000FD134 /* Main.storyboard in Resources */,
