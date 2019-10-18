@@ -28,10 +28,12 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
     
     // スコア用
     var score = 0
+    var pointUpItem_score = 0
     var scoreLabelNode:SKLabelNode!
     var bestScoreLabelNode:SKLabelNode!
     var restartLabelNode:SKLabelNode!
     var hintLabelNode:SKLabelNode!
+    var pointUpItemLabelNode:SKLabelNode!
     let userDefaults:UserDefaults = UserDefaults.standard
     
     var hint_array = ["error"]
@@ -49,6 +51,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
      bestscoreLabel 100
      restartLabel 100
      hintLabel 100
+     pointUpItemLabel 100
      
     */
 
@@ -108,6 +111,8 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
         var flug_contact_score = 0
         if (contact.bodyA.categoryBitMask & pointUpItemCategory) == pointUpItemCategory || (contact.bodyB.categoryBitMask & pointUpItemCategory) == pointUpItemCategory {
             score += 3
+            pointUpItem_score += 1
+            pointUpItemLabelNode.text = "Item Count:\(pointUpItem_score)"
             upDateScore()
             effectSoundPlayer?.play()
             flug_contact_score = 1
@@ -142,7 +147,9 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
     
     func restart() {
         score = 0
+        pointUpItem_score = 0
         scoreLabelNode.text = "Score:\(score)"
+        pointUpItemLabelNode.text = "Item Count:\(pointUpItem_score)"
         restartLabelNode.text = ""
         hintLabelNode.text = ""
         hint_array_number = Int.random(in: 0..<hint_array.count)
@@ -374,6 +381,14 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
         let bestScore = userDefaults.integer(forKey: "BEST")
         bestScoreLabelNode.text = "Best Score:\(bestScore)"
         self.addChild(bestScoreLabelNode)
+        
+        pointUpItemLabelNode = SKLabelNode()
+        pointUpItemLabelNode.fontColor = UIColor.black
+        pointUpItemLabelNode.position = CGPoint(x: 10, y: self.frame.size.height - 120)
+        pointUpItemLabelNode.zPosition = 100
+        pointUpItemLabelNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
+        pointUpItemLabelNode.text = "Item Count:\(pointUpItem_score)"
+        self.addChild(pointUpItemLabelNode)
         
         restartLabelNode = SKLabelNode()
         restartLabelNode.fontColor = UIColor.black
